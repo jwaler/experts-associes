@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 
 export default class Menu extends React.Component {
   constructor(props) {
@@ -19,7 +18,7 @@ export default class Menu extends React.Component {
   }
 
   handleScroll = () => {
-    if (document.body.getBoundingClientRect().top == 0) {
+    if (document.body.getBoundingClientRect().top === 0) {
       this.setState({
         navHeight: '',
         scrollPos: document.body.getBoundingClientRect().top,
@@ -42,7 +41,7 @@ export default class Menu extends React.Component {
       <div>
         <div id="navbar" className={`${this.state.navHeight} ${this.state.show ? "activenav" : "hidenav"}`}>
           <div className="main-logo-div">
-            <img className={this.state.hidelogo} src="//skins.azko.fr/sagan-refonte/img/logo-gros.png"></img>
+            <img className={this.state.hidelogo} src="//skins.azko.fr/sagan-refonte/img/logo-gros.png" alt="//skins.azko.fr/sagan-refonte/img/logo-gros.png"></img>
           </div>
         
           <a href="#home">Home</a>

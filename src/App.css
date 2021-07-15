@@ -21,12 +21,13 @@ body {
   width: 100% !important;
   padding: 0 !important;
   overflow: hidden;
-  border: var(--btest)
+  position:fixed;
+  z-index: 120;
 }
-.main-container { 
+.content-container { 
   /* 2 */
   width: 100% !important;
-  padding: 0 !important;
+  padding: 0 auto !important;
   overflow: hidden;
   border: var(--btest)
 }
@@ -35,10 +36,11 @@ body {
   width: 100% !important;
   padding: 0 !important;
   overflow: hidden;
-  border: var(--btest)
+  background-color: var(--color);
+  color: var(--text);
 }
 
-/* navbar */
+/* NAVBAR */
 #navbar {
   background-color: var(--color);
   position: fixed;
@@ -90,4 +92,25 @@ body {
 }
 .center-page {
   padding: 0;
+}
+
+/* MAIN CONTENT */
+.carousel-img {
+  max-height: 1000px;
+  object-fit: cover;
+}
+.text-oncarousel {
+  font-size: 25px;
+  margin-top: 250px !important;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+}
+/* FOOTER */
+.footer-bottom {
+  width: 10%;
+  float: bottom;
+  margin: 0 auto;
 }
