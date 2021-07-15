@@ -19,7 +19,7 @@ export default class CarouselComp extends React.Component {
       <div>
         <div className="text-oncarousel">
           <button className="carousel-button">VOTRE DEVIS EN MOINS DE 5 MIN</button>
-          <div style={{bottom:0}}>TEST</div>
+          <div className="carousel-text">V</div>
         </div>
         <Carousel
           showArrows={true}

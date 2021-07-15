@@ -1,3 +1,4 @@
+
 /* MACBOOK */
 @media (max-height: 780px) and (min-width: 992px) {
   :root {
@@ -13,6 +14,13 @@
     --logo-size: 450px;
     --button-padding: 15px;
     --border-bottom-color: solid 4px rgb(38, 41, 75);
+    /* Button */
+    --btnb: solid 2px rgb(165, 165, 165);
+    --btnback: transparent;
+    --btntext: white;
+    --btnbh: solid 2px rgb(165, 165, 165);
+    --btnbackh: rgba(255, 255, 255, 0.137);
+    --btntexth: white;
   }
 }
 /* DESKTOP */
@@ -28,6 +36,9 @@ body {
   font-size: var(--font-size);
   background: white;
 }
+h1 {
+  text-align: center;
+}
 
 .body-container {
   padding: 0 !important;
@@ -40,6 +51,10 @@ body {
   overflow: hidden;
   position:fixed;
   z-index: 120;
+}
+.menu-two-container {
+  margin: 0 auto;
+  width: 100%;
 }
 .content-container { 
   /* 2 */
@@ -112,6 +127,10 @@ body {
 }
 
 /* MAIN CONTENT */
+.section-title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .carousel-img {
   max-height: var(--carousel-height); 
   object-fit: cover;
@@ -127,6 +146,62 @@ body {
   width: 100%;
   position: absolute;
 }
+
+/* BUTTON */
+.carousel-button {
+  margin-top: calc(var(--carousel-height) / 3);
+  border: var(--btnb);
+  background-color: var(--btnback);
+  color: var(--btntext);
+  border-radius: 2px;
+  padding: 15px;
+  font-size: var(--font-size);
+  opacity: 0.6;
+}
+
+.carousel-button:hover {
+  border: var(--btnbh);
+  background-color: var(--btnbackh);
+  color: var(--btntexth);
+  opacity: 1;
+}
+.carousel-text {
+  margin-top: calc((var(--carousel-height)) - (var(--carousel-height) / 1.5));
+}
+.btn-prev, .btn-next {
+  font-size: 40px;
+  opacity: 0.4;
+  margin-top: 100px;
+  color: var(--color);
+  cursor: pointer;
+}
+.btn-prev:hover, .btn-next:hover {
+  opacity: 0.8;
+}
+.team-carousel-big {
+  height:200px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.team-carousel-small {
+  height: 80px;
+}
+.team-carousel-thumb {
+  width: 150px;
+}
+.team-carousel-thumbs {
+  width: auto;
+}
+.team-carousel-img-ppy {
+  object-fit: cover;
+  height: 200px;
+}
+.team-carousel-img-thumb-ppy {
+  object-fit: fill;
+  height: 80px;
+}
+
 /* FOOTER */
 .footer-bottom {
   width: 10%;

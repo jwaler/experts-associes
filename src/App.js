@@ -1,9 +1,9 @@
 import './App.css';
-import './AppButton.css';
 import React from 'react';
 import Menu from './components/menu'
 import Footer from './components/footer'
 import CarouselComp from './components/carousel'
+import TeamIntro from './components/team';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -28,7 +28,10 @@ export default class App extends React.Component {
             <CarouselComp></CarouselComp>
           </div>
           <div className="menu-two-container">
-            <h1>Nos Equipes</h1>
+            <div className="section-title">
+              <h1>Notre Équipe</h1>
+            </div>
+            <TeamIntro></TeamIntro>
             
           </div>
           <div className="menu-three-container">menu 3</div>
