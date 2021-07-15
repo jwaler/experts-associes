@@ -52,15 +52,21 @@ h1 {
   position:fixed;
   z-index: 120;
 }
-.menu-two-container {
-  margin: 0 auto;
-  width: 100%;
-}
 .content-container { 
   /* 2 */
   width: 100% !important;
   padding: 0 auto !important;
   overflow: hidden;
+  height: auto;
+}
+.menu-two-container {
+  margin: 0 auto;
+  width: 100%;
+}
+.menu-three-container {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
 }
 .footer-container {
   /* 3 */
@@ -92,6 +98,8 @@ h1 {
   padding: var(--button-padding);
   text-decoration: none;
   font-size: var(--font-size-menu);
+  transition: 0.2s ease-in-out !important;
+  border:transparent;
 }
 
 #navbar a:hover {
@@ -161,6 +169,7 @@ h1 {
   padding: 15px;
   font-size: var(--font-size);
   opacity: 0.6;
+  transition: 0.5s ease-in-out !important;
 }
 
 .carousel-button:hover {
@@ -169,6 +178,7 @@ h1 {
   color: var(--btntexth);
   opacity: 1;
 }
+
 .carousel-text {
   margin-top: calc((var(--carousel-height)) - (var(--carousel-height) / 1.5));
 }
