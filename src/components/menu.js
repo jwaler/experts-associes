@@ -8,7 +8,7 @@ export default class Menu extends React.Component {
       scrollPos: 0,
       show: true,
       navHeight: '',
-      hidelogo: '',
+      hidelogo: 'center-page',
     }
   }
   componentDidMount() {
@@ -24,7 +24,7 @@ export default class Menu extends React.Component {
         navHeight: '',
         scrollPos: document.body.getBoundingClientRect().top,
         show: document.body.getBoundingClientRect().top > this.state.scrollPos,
-        hidelogo: ''
+        hidelogo: 'center-page'
       })
     }
     else {
@@ -41,14 +41,16 @@ export default class Menu extends React.Component {
     return (
       <div>
         <div id="navbar" className={`${this.state.navHeight} ${this.state.show ? "activenav" : "hidenav"}`}>
-          <div><img className={this.state.hidelogo} src="//skins.azko.fr/sagan-refonte/img/logo-gros.png"></img></div>
+          <div className="main-logo-div">
+            <img className={this.state.hidelogo} src="//skins.azko.fr/sagan-refonte/img/logo-gros.png"></img>
+          </div>
         
-            <a href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#news">Services</a>
-            <a href="#news">Expertise</a>
-            <a href="#news">Nos Equipes</a>
-            <a href="#contact">Contact</a>
+          <a href="#home">Home</a>
+          <a href="#news">News</a>
+          <a href="#news">Services</a>
+          <a href="#news">Expertise</a>
+          <a href="#news">Nos Equipes</a>
+          <a href="#contact">Contact</a>
         </div> 
       </div>
     );
