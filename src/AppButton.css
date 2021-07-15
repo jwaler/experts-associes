@@ -5,6 +5,7 @@
   --btnbh: solid 2px rgb(165, 165, 165);
   --btnbackh: rgba(255, 255, 255, 0.137);
   --btntexth: white;
+  --fontsize: 12px;
 }
 
 .carousel-button {
@@ -13,6 +14,7 @@
   color: var(--btntext);
   border-radius: 2px;
   padding: 15px;
+  font-size: var(--fontsize);
   opacity: 0.6;
 }
 

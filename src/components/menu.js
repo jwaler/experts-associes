@@ -44,11 +44,12 @@ export default class Menu extends React.Component {
             <img className={this.state.hidelogo} src="//skins.azko.fr/sagan-refonte/img/logo-gros.png" alt="//skins.azko.fr/sagan-refonte/img/logo-gros.png"></img>
           </div>
         
-          <a href="#home">Home</a>
-          <a href="#news">News</a>
-          <a href="#news">Services</a>
-          <a href="#news">Expertise</a>
-          <a href="#news">Nos Equipes</a>
+          <a href="#accueil">Accueil</a>
+          <a href="#activite">Notre Activité</a>
+          <a href="#equipe">Notre Équipe</a>
+          <a href="#domaines">Domaines d'Intervention</a>
+          <a href="#clients">Nos Clients</a>
+          <a href="#publication">Publication</a>
           <a href="#contact">Contact</a>
         </div> 
       </div>
