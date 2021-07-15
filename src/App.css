@@ -1,38 +1,86 @@
-.App {
+:root {
+  --font-main: "Josefin Sans", sans-serif;
+  --btest: solid 1px black;
+  --color: rgb(73, 105, 153);
+  --text: white;
+}
+
+html,
+body {
+  font-family: var(--font-main);
+  font-size: 20px;
+  background: white;
+}
+
+.body-container {
+  padding: 0 !important;
+}
+
+.menu-container { 
+  /* 1 */
+  width: 100% !important;
+  padding: 0 !important;
+  overflow: hidden;
+  border: var(--btest)
+}
+.main-container { 
+  /* 2 */
+  width: 100% !important;
+  padding: 0 !important;
+  overflow: hidden;
+  border: var(--btest)
+}
+.footer-container {
+  /* 3 */
+  width: 100% !important;
+  padding: 0 !important;
+  overflow: hidden;
+  border: var(--btest)
+}
+
+/* navbar */
+#navbar {
+  background-color: var(--color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 130px;
+  display: block;
+  transition: 0.5s ease-in-out !important;
+  padding: 0 auto;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: var(--text);
   text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.activenav {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.hidenav {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
 }
-
-.App-link {
-  color: #61dafb;
+.shrinknav {
+  height: 60px !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.iwanttohidethis {
+  display: none
+}
+.test {
+  border: var(--btest)
 }
