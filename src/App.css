@@ -29,7 +29,6 @@ body {
   width: 100% !important;
   padding: 0 auto !important;
   overflow: hidden;
-  border: var(--btest)
 }
 .footer-container {
   /* 3 */
@@ -98,6 +97,7 @@ body {
 .carousel-img {
   max-height: 1000px;
   object-fit: cover;
+  filter: brightness(40%);
 }
 .text-oncarousel {
   font-size: 25px;

@@ -18,13 +18,8 @@ export default class CarouselComp extends React.Component {
     return (
       <div>
         <div className="text-oncarousel">
-              <div className="benetcam">BENJAMIN LEROUX ET CAMILLE CHAFEY</div>
-              <p></p>
-              <div>SE MARIENT</div>
-              <p></p>
-              LE VENDREDI 3 SEPTEMBRE 2021
-              <div className="space-div"></div>
-            </div>
+          <button className="carousel-button">VOTRE DEVIS EN MOINS DE 5 MIN</button>
+        </div>
         <Carousel
           showArrows={true}
           autoPlay={true}
@@ -45,7 +40,6 @@ export default class CarouselComp extends React.Component {
               src={img}
               alt={img}
               className="carousel-img"
-              style={{ filter: "brightness(50%)" }}
             />
           </div>
         </Carousel>

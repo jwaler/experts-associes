@@ -1,4 +1,5 @@
 import './App.css';
+import './AppButton.css';
 import React from 'react';
 import Menu from './components/menu'
 import Footer from './components/footer'
@@ -26,7 +27,10 @@ export default class App extends React.Component {
             {/* // */}
             <CarouselComp></CarouselComp>
           </div>
-          <div className="menu-two-container">menu 2</div>
+          <div className="menu-two-container">
+            <h1>Nos Equipes</h1>
+            
+          </div>
           <div className="menu-three-container">menu 3</div>
         </div>
         <div className="footer-container">
