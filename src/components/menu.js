@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from "../static/img/logo.png"
 
 export default class Menu extends React.Component {
   constructor(props) {
@@ -7,7 +8,7 @@ export default class Menu extends React.Component {
       scrollPos: 0,
       show: true,
       navHeight: '',
-      hidelogo: 'center-page',
+      hidelogo: 'logo-div center-page',
     }
   }
   componentDidMount() {
@@ -23,7 +24,7 @@ export default class Menu extends React.Component {
         navHeight: '',
         scrollPos: document.body.getBoundingClientRect().top,
         show: document.body.getBoundingClientRect().top > this.state.scrollPos,
-        hidelogo: 'center-page'
+        hidelogo: 'logo-div center-page'
       })
     }
     else {
@@ -41,7 +42,7 @@ export default class Menu extends React.Component {
       <div>
         <div id="navbar" className={`${this.state.navHeight} ${this.state.show ? "activenav" : "hidenav"}`}>
           <div className="main-logo-div">
-            <img className={this.state.hidelogo} src="//skins.azko.fr/sagan-refonte/img/logo-gros.png" alt="//skins.azko.fr/sagan-refonte/img/logo-gros.png"></img>
+            <img className={this.state.hidelogo} src={logo} alt={logo}></img>
           </div>
         
           <a href="#accueil">Accueil</a>

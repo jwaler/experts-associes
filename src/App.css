@@ -11,7 +11,7 @@
     --margin-menu: 105px;
     --margin-shrink-value: 50px;
     --carousel-height: 700px;
-    --logo-size: 450px;
+    --logo-size: 55px;
     --button-padding: 15px;
     --border-bottom-color: solid 4px rgb(38, 41, 75);
     /* Button */
@@ -65,7 +65,8 @@ h1 {
 .footer-container {
   /* 3 */
   width: 100% !important;
-  padding: 0 !important;
+  padding-top: 50px;
+  padding-bottom:40px;
   overflow: hidden;
   background-color: var(--color);
   color: var(--text);
@@ -113,8 +114,11 @@ h1 {
   height: var(--margin-shrink-value) !important;
 }
 .main-logo-div {
-  width: var(--logo-size);
   margin: 0 auto;
+  text-align: center;
+}
+.logo-div {
+  height: var(--logo-size);
 }
 .iwanttohidethis {
   display: none;
@@ -123,7 +127,7 @@ h1 {
   border: var(--btest);
 }
 .center-page {
-  padding: 0;
+  padding: 0 auto;
 }
 
 /* MAIN CONTENT */

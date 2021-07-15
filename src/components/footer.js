@@ -3,6 +3,7 @@ import { Container, Col, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import logo from "../static/img/logo.png"
 
 library.add(faFacebookF, faTwitter); 
 
@@ -25,21 +26,23 @@ export default class Footer extends React.Component {
       <div>
         <Container>
           <Row>
-            <Col sm={1}>LOGO</Col>
-            <Col sm={6}>
+            <Col sm={3}><img src={logo} alt={logo}></img></Col>
+            <Col sm={3}>
               <p># Information 1</p>
               <p># Information 1</p>
               <p># Information 1</p>
               <p># Information 1</p>
             </Col>
             <Col sm={3}>
-            <FontAwesomeIcon icon={['fab', 'facebook-f']} />
-            <FontAwesomeIcon icon={['fab', 'twitter']} />
+            <FontAwesomeIcon icon={['fab', 'facebook-f']} style={{fontSize: "35px"}}/><br></br>
+            <FontAwesomeIcon icon={['fab', 'twitter']} style={{fontSize: "35px"}}/>
             </Col>
           </Row>
           </Container>
           <div className="footer-bottom">
-            Copyright @ 2021
+            <div>Copyright @ 2021</div>
+            <div><a href="">Informations légales</a></div>
+            
           </div>
       </div>
     );
