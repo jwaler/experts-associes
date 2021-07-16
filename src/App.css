@@ -8,12 +8,15 @@
     --text: white;
     --font-size: 12px;
     --font-size-menu: 14px;
+    --font-size-textcarousel: 25px;
     --margin-menu: 105px;
     --margin-shrink-value: 50px;
     --carousel-height: 700px;
     --logo-size: 55px;
     --button-padding: 15px;
     --border-bottom-color: solid 4px rgb(38, 41, 75);
+    --card-border-color: solid 2px rgb(73, 105, 153);
+    --inv-card-border-color: solid 2px white;
     /* Button */
     --btnb: solid 2px rgb(165, 165, 165);
     --btnback: transparent;
@@ -150,7 +153,7 @@ h1 {
 }
 .text-oncarousel {
   height: calc(var(--carousel-height) - var(--margin-menu));
-  font-size: 25px;
+  font-size: var(--font-size-textcarousel);
   margin-top: var(--margin-menu) !important;
   z-index: 1;
   color: white;
@@ -159,7 +162,7 @@ h1 {
   position: absolute;
 }
 
-/* BUTTON */
+/* CAROUSEL */
 .carousel-button {
   margin-top: calc(var(--carousel-height) / 3);
   border: var(--btnb);
@@ -171,14 +174,12 @@ h1 {
   opacity: 0.6;
   transition: 0.5s ease-in-out !important;
 }
-
 .carousel-button:hover {
   border: var(--btnbh);
   background-color: var(--btnbackh);
   color: var(--btntexth);
   opacity: 1;
 }
-
 .carousel-text {
   margin-top: calc((var(--carousel-height)) - (var(--carousel-height) / 1.5));
 }
@@ -214,6 +215,23 @@ h1 {
 .team-carousel-img-thumb-ppy {
   object-fit: fill;
   height: 80px;
+}
+
+/* CARDS */
+.activity-card {
+  border-radius: 5px;
+  padding: 20px;
+  border: var(--card-border-color);
+}
+.activity-card:hover {
+  border: var(--inv-card-border-color);
+  background-color: var(--color);
+  color:var(--text);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.space-between-row {
+  margin: 10px;
 }
 
 /* FOOTER */

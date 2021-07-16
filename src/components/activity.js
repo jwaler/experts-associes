@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap'
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 export default class Activity extends React.Component {
   constructor(props) {
@@ -16,11 +18,29 @@ export default class Activity extends React.Component {
     return (
       <div>
         <Container>
-          <Row>
-            <Col><Card className="sliding cards">Baux immobiliers</Card></Col>
-            <Col><Card>Baux immobiliers</Card></Col>
-            <Col><Card>Baux immobiliers</Card></Col>
-            <Col><Card>Baux immobiliers</Card></Col>
+          <Row className="space-between-row">
+              <Col>
+                <ScrollAnimation animateIn="animate__fadeInLeft">
+                  <Card className="activity-card">Baux immobiliers</Card>
+                </ScrollAnimation>
+              </Col>
+              <Col>
+                <ScrollAnimation animateIn="animate__fadeInRight">
+                  <Card className="activity-card">Baux immobiliers</Card>
+                </ScrollAnimation>
+              </Col>
+          </Row>
+          <Row className="space-between-row">
+              <Col>
+                <ScrollAnimation animateIn="animate__fadeInLeft">
+                  <Card className="activity-card">Baux immobiliers</Card>
+                </ScrollAnimation>
+              </Col>
+              <Col>
+                <ScrollAnimation animateIn="animate__fadeInRight">
+                  <Card className="activity-card">Baux immobiliers</Card>
+                </ScrollAnimation>
+              </Col>
           </Row>
         </Container>
         

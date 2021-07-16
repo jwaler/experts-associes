@@ -1,5 +1,8 @@
 import React from 'react';
 import logo from "../static/img/logo.png"
+// ES6 Imports
+import * as Scroll from 'react-scroll';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export default class Menu extends React.Component {
   constructor(props) {
@@ -44,14 +47,13 @@ export default class Menu extends React.Component {
           <div className="main-logo-div">
             <img className={this.state.hidelogo} src={logo} alt={logo}></img>
           </div>
-        
-          <a href="#accueil">Accueil</a>
-          <a href="#activite">Notre Activité</a>
-          <a href="#equipe">Notre Équipe</a>
-          <a href="#domaines">Domaines d'Intervention</a>
-          <a href="#clients">Nos Clients</a>
-          <a href="#publication">Publication</a>
-          <a href="#contact">Contact</a>
+          <Link activeClass="active" to="accueil" spy={true} smooth={true} duration={200} delay={0}>Accueil</Link>
+          <Link activeClass="active" to="activite" spy={true} smooth={true} duration={200} delay={0}>Notre Activité</Link>
+          <Link activeClass="active" to="equipe" spy={true} smooth={true} duration={200} delay={0}>Notre Équipe</Link>
+          <Link activeClass="active" to="domaines" spy={true} smooth={true} duration={200} delay={0}>Domaines d'Intervention</Link>
+          <Link activeClass="active" to="clients" spy={true} smooth={true} duration={200} delay={0}>Nos Clients</Link>
+          <Link activeClass="active" to="publications" spy={true} smooth={true} duration={200} delay={0}>Publications</Link>
+          <Link activeClass="active" to="contact" spy={true} smooth={true} duration={200} delay={0}>Contact</Link>
         </div> 
       </div>
     );
