@@ -41,7 +41,7 @@ export default class Footer extends React.Component {
           </Container>
           <div className="footer-bottom">
             <div>Copyright @ 2021</div>
-            <div><a href="">Mentions légales</a></div>
+            <div><a href="/#">Mentions légales</a></div>
             
           </div>
       </div>

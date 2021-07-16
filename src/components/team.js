@@ -59,7 +59,7 @@ const itemsthumb = [
 
 const thumbItems = (items, [setThumbIndex, setThumbAnimation]) => {
   return itemsthumb.map((item, i) => (
-      <div className="team-carousel-thumb" onClick={() => (setThumbIndex(i), setThumbAnimation(true))}>
+      <div className='team-carousel-thumb' onClick={() => {(setThumbIndex(i)); setThumbAnimation(true)}}>
           {item}
       </div>
   ));
@@ -118,11 +118,12 @@ const TeamIntro = () => {
             <AliceCarousel
             activeIndex={mainIndex}
             animationType="fadeout"
-            animationDuration={300}
+            animationDuration={2000}
+            autoPlayInterval={4000}
             disableDotsControls
             disableButtonsControls
             infinite
-            autoplay={true}
+            autoPlay
             items={items}
             mouseTracking={!thumbAnimation}
             onSlideChange={syncMainBeforeChange}
@@ -135,6 +136,8 @@ const TeamIntro = () => {
                     activeIndex={thumbIndex}
                     autoWidth
                     infinite
+                    autoPlay
+                    autoPlayInterval={4000}
                     disableDotsControls
                     disableButtonsControls
                     items={thumbs}
