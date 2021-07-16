@@ -59,32 +59,29 @@ export default class App extends React.Component {
           <div className="menu-two-container" id='activite'>
             <div className="section-title">
             {/* <ScrollAnimation animateIn="animate__fadeInDown"></ScrollAnimation> */}
-            <ScrollAnimation animateIn="animate__fadeInDown"><h1>Notre Activité</h1></ScrollAnimation>
+            <h1>Notre Activité</h1>
             </div>
             <ScrollAnimation animateIn="animate__fadeIn"><Activity></Activity></ScrollAnimation>
-            <div style={{height:"600px"}}></div>
           </div>
           {/* EQUIPE */}
           <div className="menu-three-container" id="equipe">
             <div className="section-title">
-              <ScrollAnimation animateIn="animate__fadeInDown"><h1>Notre Équipe</h1></ScrollAnimation>
+              <h1>Notre Équipe</h1>
             </div>
-            <ScrollAnimation animateIn="animate__fadeIn"><TeamIntro></TeamIntro></ScrollAnimation>
-            <div style={{height:"300px"}}></div>
+            <ScrollAnimation animateIn="animate__fadeIn" duration={2}><TeamIntro></TeamIntro></ScrollAnimation>
           </div>
           {/* DOMAINES */}
           <div className="menu-four-container" id="domaines">
             <div className="section-title">
-              <ScrollAnimation animateIn="animate__fadeInDown"><h1>Domaines d'Intervention</h1></ScrollAnimation>
+              <h1>Domaines d'Intervention</h1>
             </div>
             
             <ScrollAnimation animateIn="animate__fadeIn"><Field></Field></ScrollAnimation>
-            <div style={{height:"600px"}}></div>
           </div>
           {/* CLIENTS */}
           <div className="menu-five-container" id="clients">
             <div className="section-title">
-              <ScrollAnimation animateIn="animate__fadeInDown"><h1>Nos Clients</h1></ScrollAnimation>
+              <h1>Nos Clients</h1>
             </div>
             <div style={{height:"600px"}}></div>
             <ScrollAnimation animateIn="animate__fadeIn"></ScrollAnimation>
@@ -92,7 +89,7 @@ export default class App extends React.Component {
           {/* PUBLI  */}
           <div className="menu-six-container" id="publications">
             <div className="section-title">
-              <ScrollAnimation animateIn="animate__fadeInDown"><h1>Publications</h1></ScrollAnimation>
+              <h1>Publications</h1>
             </div>
             <div style={{height:"600px"}}></div>
             <ScrollAnimation animateIn="animate__fadeIn"></ScrollAnimation>

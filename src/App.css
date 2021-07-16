@@ -5,6 +5,7 @@
     --font-main: "Josefin Sans", sans-serif;
     --btest: solid 1px black;
     --color: rgb(73, 105, 153);
+    --colordark: rgb(38, 41, 75);
     --text: white;
     --font-size: 12px;
     --font-size-menu: 14px;
@@ -14,16 +15,22 @@
     --carousel-height: 700px;
     --logo-size: 55px;
     --button-padding: 15px;
-    --border-bottom-color: solid 4px rgb(38, 41, 75);
-    --card-border-color: solid 2px rgb(73, 105, 153);
+    --section-w: 400px;
+    --border-bottom-color: solid 4px var(--colordark);
+    --border-bottom-title: solid 1px var(--colordark);
+    --card-border-color: solid 2px var(--color);
     --inv-card-border-color: solid 2px white;
     /* Button */
     --btnb: solid 2px rgb(165, 165, 165);
     --btnback: transparent;
-    --btntext: white;
+    --btntext: var(--text);
     --btnbh: solid 2px rgb(165, 165, 165);
     --btnbackh: rgba(255, 255, 255, 0.137);
-    --btntexth: white;
+    --btntexth: var(--text);
+    /* carousel */
+    --thumb-img-width: 120px;
+    --thumb-img-maxheight: 80px;
+    --main-img-height: 200px;
   }
 }
 /* DESKTOP */
@@ -41,6 +48,11 @@ body {
 }
 h1 {
   text-align: center;
+  padding: 20px;
+  border-bottom: var(--border-bottom-title);
+}
+#accueil, #activite, #equipe, #domaines, #clients, #publications, #contact {
+  padding-top: 90px;
 }
 
 .body-container {
@@ -75,7 +87,7 @@ h1 {
   /* 3 */
   width: 100% !important;
   padding-top: 50px;
-  padding-bottom:40px;
+  padding-bottom:100px;
   overflow: hidden;
   background-color: var(--color);
   color: var(--text);
@@ -144,7 +156,16 @@ h1 {
 /* MAIN CONTENT */
 .section-title {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: var(--section-w);
+  margin: 0 auto;
+}
+.section-separation {
+  height: 30px;
+  margin-bottom: 20px !important;
+  margin: 0 auto;
+  width: calc(var(--section-w) /3);
 }
 .carousel-img {
   max-height: var(--carousel-height); 
@@ -194,27 +215,32 @@ h1 {
   opacity: 0.8;
 }
 .team-carousel-big {
-  height:200px;
+  height: var(--main-img-height);
   width: 100%;
   padding: 0;
   margin: 0;
 }
 .team-carousel-small {
-  height: 80px;
+  height: var(--thumb-img-maxheight);
+  cursor: pointer;
+}
+.team-carousel-small:hover {
+  opacity: 0.7;
 }
 .team-carousel-thumb {
-  width: 150px;
+  width: var(--thumb-img-width);
 }
 .team-carousel-thumbs {
-  width: auto;
+  width: calc(var(--thumb-img-width) * 2);
+  margin: 0 auto;
 }
 .team-carousel-img-ppy {
   object-fit: cover;
-  height: 200px;
+  height: var(--main-img-height);
 }
 .team-carousel-img-thumb-ppy {
   object-fit: fill;
-  height: 80px;
+  height: var(--thumb-img-maxheight);
 }
 
 /* CARDS */
@@ -239,4 +265,11 @@ h1 {
   width: 10%;
   float: bottom;
   margin: 0 auto;
+}
+.footer-bottom a {
+  color: var(--colordark);
+  transition: 0.5s ease-in-out;
+}
+.footer-bottom a:hover {
+  color: var(--text)
 }

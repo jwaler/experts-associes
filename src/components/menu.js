@@ -34,11 +34,10 @@ export default class Menu extends React.Component {
       this.setState({
         navHeight: 'shrinknav',
         scrollPos: document.body.getBoundingClientRect().top,
-        show: document.body.getBoundingClientRect().top > this.state.scrollPos,
         hidelogo: 'iwanttohidethis'
       })
     }
-    console.log(document.body.getBoundingClientRect().top)
+    // console.log(document.body.getBoundingClientRect().top)
   }
   render() {
     return (

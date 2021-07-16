@@ -18,30 +18,18 @@ export default class Activity extends React.Component {
     return (
       <div>
         <Container>
-          <Row className="space-between-row">
-              <Col>
-                <ScrollAnimation animateIn="animate__fadeInLeft">
-                  <Card className="activity-card">Baux immobiliers</Card>
-                </ScrollAnimation>
-              </Col>
-              <Col>
-                <ScrollAnimation animateIn="animate__fadeInRight">
-                  <Card className="activity-card">Baux immobiliers</Card>
-                </ScrollAnimation>
-              </Col>
+          <Row>
+            <ScrollAnimation animateIn="animate__fadeIn" duration={2}>
+              <div>
+                <p>
+                Les types d’estimations sont variés : valeurs locatives, valeurs vénales de murs, droits au bail, fonds de commerces, indemnités d’éviction ou de résiliation anticipée du bail ainsi que réparation de tous troubles de jouissance, pour tous types de biens immobiliers qu’ils soient commerciaux ou d’habitation.
+                </p>
+                <p>Les méthodes d’évaluation sont celles préconisées par la charte de l’expertise en évaluation immobilière (ratifiée par 15 entités et organisations professionnelles) et par la RICS (Royal Institution of Chartered Surveyors).</p>
+              </div>
+            </ScrollAnimation>
+            
           </Row>
-          <Row className="space-between-row">
-              <Col>
-                <ScrollAnimation animateIn="animate__fadeInLeft">
-                  <Card className="activity-card">Baux immobiliers</Card>
-                </ScrollAnimation>
-              </Col>
-              <Col>
-                <ScrollAnimation animateIn="animate__fadeInRight">
-                  <Card className="activity-card">Baux immobiliers</Card>
-                </ScrollAnimation>
-              </Col>
-          </Row>
+          
         </Container>
         
       </div>
