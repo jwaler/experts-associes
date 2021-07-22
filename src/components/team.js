@@ -3,10 +3,9 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import Expert1 from '../static/img/1.jpg'
 import Expert2 from '../static/img/2.jpg'
-import Expert3 from '../static/img/3.jpg'
 import { Container, Row, Col } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 const items = [
     <Container className="team-carousel-big" data-value="1" id="1">

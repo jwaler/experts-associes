@@ -1,5 +1,6 @@
 import React from 'react';
-import CookieConsent, { Cookies } from "react-cookie-consent";
+import CookieConsent from "react-cookie-consent";
+// import Cookies from "react-cookie-consent";
 
 export default class Consent extends React.Component {
   constructor(props) {

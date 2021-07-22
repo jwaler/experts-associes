@@ -1,7 +1,11 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
+import field1 from '../static/img/bauxcom.png';
+import field2 from '../static/img/field2.jpg';
+import field3 from '../static/img/field3.jpg';
+import field4 from '../static/img/field4.jpg';
 
 export default class Field extends React.Component {
   constructor(props) {
@@ -31,36 +35,28 @@ export default class Field extends React.Component {
   render() {
     return (
       <div>
-        <Container>
-          <Row className="space-between-row">
-              <Col>
-                <ScrollAnimation animateIn="animate__fadeInLeft">
-                  <Card className="activity-card" onClick={this.handleCards}><h4>Locaux Commerciaux</h4></Card>
-                </ScrollAnimation>
-              </Col>
-              <Col>
-                <ScrollAnimation animateIn="animate__fadeInRight">
-                  <Card className="activity-card"><h4>Locaux d'habitation</h4></Card>
-                </ScrollAnimation>
-              </Col>
-          </Row>
-          <Row className="space-between-row">
-              <Col>
-                <ScrollAnimation animateIn="animate__fadeInLeft">
-                  <Card className="activity-card"><h4>Locaux atypiques</h4></Card>
-                </ScrollAnimation>
-              </Col>
-              <Col>
-                <ScrollAnimation animateIn="animate__fadeInRight">
-                  <Card className="activity-card"><h4>Terrains et droits à construire</h4></Card>
-                </ScrollAnimation>
-              </Col>
-          </Row>
-          <Row className="space-between-row" style={{height:"300px"}}>
-            
-          </Row>
+        <Row className="row-field">
+          <Col className="pic-div">
+          <ScrollAnimation animateIn="animate__fadeInLeft"><div className="item-field"><span className="text-on-img">Locaux Commerciaux</span><img className="img-field" src={field1} alt={field1}></img></div>
+          </ScrollAnimation>
+          </Col>
+
+          <Col className="pic-div">
+          <ScrollAnimation animateIn="animate__fadeInLeft"><div className="item-field"><span className="text-on-img">Locaux d'habitation</span><img className="img-field" src={field2} alt={field2}></img></div>
+          </ScrollAnimation>
+          </Col>
           
-        </Container>
+          <Col className="pic-div">
+          <ScrollAnimation animateIn="animate__fadeInRight"><div className="item-field"><span className="text-on-img">Locaux atypiques</span><img className="img-field" src={field3} alt={field3}></img></div>
+          </ScrollAnimation>
+          </Col>
+
+          <Col className="pic-div">
+          <ScrollAnimation animateIn="animate__fadeInRight"><div className="item-field"><span className="text-on-img">Terrains à construire</span><img className="img-field" src={field4} alt={field4}></img></div>
+          </ScrollAnimation>
+          </Col>
+        </Row>
+        <p></p>
       </div>
     );
   }

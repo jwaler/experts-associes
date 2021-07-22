@@ -13,8 +13,7 @@ import Contact from './components/contact';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 // ES6 Imports
-import * as Scroll from 'react-scroll';
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Events, animateScroll as scroll, scroller } from 'react-scroll'
 // spinner loading
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -28,7 +27,7 @@ export default class App extends React.Component {
     this.scrollToTop = this.scrollToTop.bind(this);
   }
   componentDidMount() {
-    this.wait(2000);
+    this.wait(20); // 2000
     Events.scrollEvent.register('begin', function () {
       console.log("begin", arguments);
     });
@@ -36,7 +35,7 @@ export default class App extends React.Component {
       console.log("end", arguments);
     });
   }
-  wait = async (milliseconds = 2000) => {
+  wait = async (milliseconds = 20) => { // 2000
     await this.sleep(milliseconds);
     this.setState({
       loading: false

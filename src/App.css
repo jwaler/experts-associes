@@ -10,15 +10,21 @@
     --colordark: #26294b;
     --colorgrey: #e6e7f7;
     --text: white;
+    --textdark: black;
     --font-size: 12px;
     --font-size-menu: 14px;
     --font-size-textcarousel: 25px;
+    --font-size-cards-before: 22px;
+    --font-size-card-after: 25px;
     --margin-menu: 105px;
     --margin-shrink-value: 50px;
     --carousel-height: 700px;
     --logo-size: 55px;
     --button-padding: 15px;
+    /* section */
     --section-w: 400px;
+    --section-padding-top: 90px;
+    /* borders */
     --border-bottom-color: solid 4px var(--colordark);
     --border-bottom-white: solid 4px var(--text);
     --border-bottom-title: solid 1px var(--colordark);
@@ -37,6 +43,14 @@
     --thumb-img-width: 120px;
     --thumb-img-maxheight: 80px;
     --main-img-height: 200px;
+    /* Field */
+    --field-height: 400px;
+    /* form */
+    --form-margin-bottom: 100px;
+    --input-width: 250px; 
+    /* footer */
+    --footer-padding-top: 50px;
+    --footer-padding-bottom: 100px;
   }
 }
 /* DESKTOP */
@@ -58,7 +72,7 @@ h1 {
   border-bottom: var(--border-bottom-title);
 }
 #accueil, #activite, #equipe, #domaines, #clients, #publications, #contact {
-  padding-top: 90px;
+  padding-top: var(--section-padding-top);
 }
 
 .body-container {
@@ -80,20 +94,16 @@ h1 {
   overflow: hidden;
   height: auto;
 }
-.menu-two-container {
-  margin: 0 auto;
-  width: 100%;
-}
-.menu-three-container {
-  margin: 0 auto;
+.menu-two-container, .menu-three-container, .menu-four-container, .menu-five-container, .menu-six-container, .menu-seven-container {
+  margin: 0 !important;
   width: 100%;
   height: auto;
 }
 .footer-container {
   /* 3 */
   width: 100% !important;
-  padding-top: 50px;
-  padding-bottom:100px;
+  padding-top: var(--footer-padding-top);
+  padding-bottom: var(--footer-padding-bottom);
   overflow: hidden;
   background-color: var(--color);
   color: var(--text);
@@ -183,7 +193,7 @@ h1 {
   font-size: var(--font-size-textcarousel);
   margin-top: var(--margin-menu) !important;
   z-index: 1;
-  color: white;
+  color: var(--text);
   text-align: center;
   width: 100%;
   position: absolute;
@@ -250,31 +260,55 @@ h1 {
   height: var(--thumb-img-maxheight);
 }
 
-/* CARDS */
-.activity-card {
-  border-radius: 5px;
-  padding: 15px;
-  border: var(--card-border-color);
+/* FIELDS */
+.row-field {
+  width: 100%;
+  height: var(--field-height);
+  display: flex;
   text-align: center;
 }
-.activity-card:hover {
-  border: var(--inv-card-border-color);
-  background-color: var(--color);
-  color:var(--text);
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
+/* container */
+.pic-div {
+  width: 100%;
+  height: var(--field-height);
+  padding: 0;
+  position: relative;
+  overflow:hidden;
 }
-.space-between-row {
-  margin-top: 10px !important;
-  margin-bottom: 10px !important;
-  width:70%;
-  margin: 0 auto;
+/* div being zoomed */
+.item-field {
+  background: rgb(255, 255, 255);
+  width: 100%;
+  height: var(--field-height);
+  transition: 0.5s ease;
+  font-size: var(--font-size-cards-before);
+  color:var(--textdark) !important;
+}
+.item-field:hover {
+  transform: scale(1.2);
+  color: var(--textdark) !important;
+  font-size: var(--font-size-card-after);
+}
+/* picture */
+.img-field {
+  object-fit:cover;
+  width:100%;
+	max-width: 100%;
+  cursor: pointer;
+  filter:opacity(0.3)
+}
+/* text */
+.text-on-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* CONTACT */
 .form-frame {
   border: none;
-  margin-bottom: 100px;
+  margin-bottom: var(--form-margin-bottom);
 }
 .input-area {
   padding: 0 auto;
@@ -290,7 +324,7 @@ h1 {
   border: var(--border-input);
   border-radius: 2px;
   padding: 8px;
-  width: 250px;
+  width: var(--input-width);
   transition: 0.5s ease-in-out;
 }
 .input-contact-info-name:focus, .input-contact-info-email:focus, .input-contact-info-reqtype:focus, .input-contact-info-content:focus {
@@ -314,10 +348,6 @@ h1 {
   color: var(--text);
   border: solid 1px var(--text);
   border-radius: 2px;
-}
-input.option {
-  padding: 20px;
-  text-indent: 20px;
 }
 
 /* FOOTER */

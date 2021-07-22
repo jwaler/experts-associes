@@ -1,8 +1,7 @@
 import React from 'react';
 import logo from "../static/img/logo.png"
 // ES6 Imports
-import * as Scroll from 'react-scroll';
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 export default class Menu extends React.Component {
   constructor(props) {
