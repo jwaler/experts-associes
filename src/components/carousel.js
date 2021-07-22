@@ -1,7 +1,8 @@
 import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import img from '../static/img/Clauses-obligatoires-bail-min-1536x1025.jpg'
+import img from '../static/img/Clauses-obligatoires-bail-min-1536x1025.jpg';
+import { Link } from 'react-scroll';
 
 export default class CarouselComp extends React.Component {
   constructor(props) {
@@ -18,8 +19,8 @@ export default class CarouselComp extends React.Component {
     return (
       <div>
         <div className="text-oncarousel">
-          <button className="carousel-button">VOTRE DEVIS EN MOINS DE 5 MIN</button>
-          <div className="carousel-text">V</div>
+          <Link type="button" className="carousel-button" activeClass="active" to="contact" spy={true} smooth={true} duration={200} delay={0}>DEMANDEZ VOTRE DEVIS D'EXPERTISE</Link>
+          
         </div>
         <Carousel
           showArrows={true}

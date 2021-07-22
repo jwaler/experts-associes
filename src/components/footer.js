@@ -34,8 +34,12 @@ export default class Footer extends React.Component {
               <p># Information 1</p>
             </Col>
             <Col sm={3}>
-            <FontAwesomeIcon icon={['fab', 'facebook-f']} style={{fontSize: "35px"}}/><br></br>
-            <FontAwesomeIcon icon={['fab', 'twitter']} style={{fontSize: "35px"}}/>
+              <span style={{marginRight:"10px"}}>
+                <FontAwesomeIcon icon={['fab', 'facebook-f']} style={{fontSize: "35px"}}/>
+              </span>
+              <span>
+                <FontAwesomeIcon icon={['fab', 'twitter']} style={{fontSize: "35px"}}/>
+              </span>
             </Col>
           </Row>
           </Container>

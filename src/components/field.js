@@ -7,18 +7,26 @@ export default class Field extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loccom: true,
-      var: 0
+      commerciaux: false,
+      habitation: false,
+      atypiques: false,
+      terrains: false
     }
-    this.handleLocCom = this.handleLocCom.bind(this);
+    this.handleCards = this.handleCards.bind(this);
   }
   componentDidMount() {
-    this.setState({loccom: true});
+    this.setState({
+      commerciaux: false,
+      habitation: false,
+      atypiques: false,
+      terrains: false
+    });
   }
 
-  handleLocCom() {    
-    this.setState(prevState => ({ loccom: !prevState.loccom }));
-    console.log(this.state.loccom)
+  handleCards(e) {    
+    console.log(e.target.id)
+    this.setState(prevState => ({ commerciaux: !prevState.commerciaux }));
+    console.log(this.state.commerciaux)
   }
   render() {
     return (
@@ -27,7 +35,7 @@ export default class Field extends React.Component {
           <Row className="space-between-row">
               <Col>
                 <ScrollAnimation animateIn="animate__fadeInLeft">
-                  <Card className="activity-card" onClick={this.handleLocCom}><h4>Locaux Commerciaux</h4></Card>
+                  <Card className="activity-card" onClick={this.handleCards}><h4>Locaux Commerciaux</h4></Card>
                 </ScrollAnimation>
               </Col>
               <Col>
@@ -47,6 +55,9 @@ export default class Field extends React.Component {
                   <Card className="activity-card"><h4>Terrains et droits à construire</h4></Card>
                 </ScrollAnimation>
               </Col>
+          </Row>
+          <Row className="space-between-row" style={{height:"300px"}}>
+            
           </Row>
           
         </Container>

@@ -2,10 +2,13 @@
 /* MACBOOK */
 @media (max-height: 780px) and (min-width: 992px) {
   :root {
+    --height: 780px;
     --font-main: "Josefin Sans", sans-serif;
     --btest: solid 1px black;
     --color: rgb(73, 105, 153);
-    --colordark: rgb(38, 41, 75);
+    --colorlight: rgb(212, 212, 218);
+    --colordark: #26294b;
+    --colorgrey: #e6e7f7;
     --text: white;
     --font-size: 12px;
     --font-size-menu: 14px;
@@ -17,7 +20,10 @@
     --button-padding: 15px;
     --section-w: 400px;
     --border-bottom-color: solid 4px var(--colordark);
+    --border-bottom-white: solid 4px var(--text);
     --border-bottom-title: solid 1px var(--colordark);
+    --border-input: solid 1px var(--colordark);
+    --border-input-focus: solid 1px var(--color);
     --card-border-color: solid 2px var(--color);
     --inv-card-border-color: solid 2px white;
     /* Button */
@@ -185,7 +191,7 @@ h1 {
 
 /* CAROUSEL */
 .carousel-button {
-  margin-top: calc(var(--carousel-height) / 3);
+  margin-top: calc(var(--carousel-height) / 5);
   border: var(--btnb);
   background-color: var(--btnback);
   color: var(--btntext);
@@ -194,6 +200,7 @@ h1 {
   font-size: var(--font-size);
   opacity: 0.6;
   transition: 0.5s ease-in-out !important;
+  text-decoration: none;
 }
 .carousel-button:hover {
   border: var(--btnbh);
@@ -246,8 +253,9 @@ h1 {
 /* CARDS */
 .activity-card {
   border-radius: 5px;
-  padding: 20px;
+  padding: 15px;
   border: var(--card-border-color);
+  text-align: center;
 }
 .activity-card:hover {
   border: var(--inv-card-border-color);
@@ -257,7 +265,59 @@ h1 {
   transition: 0.2s ease-in-out;
 }
 .space-between-row {
-  margin: 10px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  width:70%;
+  margin: 0 auto;
+}
+
+/* CONTACT */
+.form-frame {
+  border: none;
+  margin-bottom: 100px;
+}
+.input-area {
+  padding: 0 auto;
+  margin: 0 auto;
+}
+.button-area {
+  padding: 0 auto;
+  margin: 0 auto;
+  text-align: center;
+}
+.input-contact-info-name, .input-contact-info-email, .input-contact-info-reqtype, .input-contact-info-content {
+  background-color: var(--text);
+  border: var(--border-input);
+  border-radius: 2px;
+  padding: 8px;
+  width: 250px;
+  transition: 0.5s ease-in-out;
+}
+.input-contact-info-name:focus, .input-contact-info-email:focus, .input-contact-info-reqtype:focus, .input-contact-info-content:focus {
+  outline: none;
+  background-color: var(--colorgrey);
+  border: var(--border-input-focus);
+}
+.input-contact-info-content {
+  height: 150px;
+}
+.send-button {
+  padding: 15px;
+  border-radius: 2px;
+  border: solid 1px var(--colordark);
+  font-size: var(--font-size-menu);
+  transition: 0.2s ease-in-out;
+  width: 100px;
+}
+.send-button:hover {
+  background: var(--color);
+  color: var(--text);
+  border: solid 1px var(--text);
+  border-radius: 2px;
+}
+input.option {
+  padding: 20px;
+  text-indent: 20px;
 }
 
 /* FOOTER */
@@ -272,4 +332,26 @@ h1 {
 }
 .footer-bottom a:hover {
   color: var(--text)
+}
+
+/* LOADER */
+.spinner {
+  text-align: center;
+  padding: 0 auto;
+  margin: 0 auto;
+  margin-top: calc(var(--height) / 3) !important;
+}
+
+/* IMAGE */
+.logo-instance {
+  width: 100px;
+}
+.side-col-img {
+  overflow: hidden;
+  margin-right: 50px;
+}
+.side-img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
