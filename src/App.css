@@ -54,7 +54,59 @@
   }
 }
 /* DESKTOP */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  :root {
+    --height: 780px;
+    --font-main: "Josefin Sans", sans-serif;
+    --btest: solid 1px black;
+    --color: rgb(73, 105, 153);
+    --colorlight: rgb(212, 212, 218);
+    --colordark: #26294b;
+    --colorgrey: #e6e7f7;
+    --text: white;
+    --textdark: black;
+    --font-size: 12px;
+    --font-size-menu: 14px;
+    --font-size-textcarousel: 25px;
+    --font-size-cards-before: 22px;
+    --font-size-card-after: 25px;
+    --margin-menu: 105px;
+    --margin-shrink-value: 50px;
+    --carousel-height: 700px;
+    --logo-size: 55px;
+    --button-padding: 15px;
+    /* section */
+    --section-w: 400px;
+    --section-padding-top: 90px;
+    /* borders */
+    --border-bottom-color: solid 4px var(--colordark);
+    --border-bottom-white: solid 4px var(--text);
+    --border-bottom-title: solid 1px var(--colordark);
+    --border-input: solid 1px var(--colordark);
+    --border-input-focus: solid 1px var(--color);
+    --card-border-color: solid 2px var(--color);
+    --inv-card-border-color: solid 2px white;
+    /* Button */
+    --btnb: solid 2px rgb(165, 165, 165);
+    --btnback: transparent;
+    --btntext: var(--text);
+    --btnbh: solid 2px rgb(165, 165, 165);
+    --btnbackh: rgba(255, 255, 255, 0.137);
+    --btntexth: var(--text);
+    /* carousel */
+    --thumb-img-width: 120px;
+    --thumb-img-maxheight: 80px;
+    --main-img-height: 200px;
+    /* Field */
+    --field-height: 400px;
+    /* form */
+    --form-margin-bottom: 100px;
+    --input-width: 250px; 
+    /* footer */
+    --footer-padding-top: 50px;
+    --footer-padding-bottom: 100px;
+  }
+}
 /* IPAD */
 @media (max-width: 991px) and (min-width: 600px) {}
 /* SMARTPHONE */
