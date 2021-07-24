@@ -35,7 +35,7 @@ export default class App extends React.Component {
       console.log("end", arguments);
     });
   }
-  wait = async (milliseconds = 20) => { // 2000
+  wait = async (milliseconds = 2000) => { // 2000
     await this.sleep(milliseconds);
     this.setState({
       loading: false
@@ -49,7 +49,7 @@ export default class App extends React.Component {
   }
   scrollTo() {
     scroller.scrollTo('scroll-to-element', {
-      duration: 800,
+      duration: 2000,
       delay: 0,
       smooth: 'easeInOutQuart'
     })
